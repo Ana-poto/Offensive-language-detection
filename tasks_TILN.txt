@@ -1,0 +1,10 @@
+Tasks
+
+->split dataset
+->preprocesare dataset (eliminare stopwords,emojis,mentions,urls,formulas,etc)
+
+->vectorizarea dataset-ului
+->crearea clasificatorului
+->training phase
+->UI
+->testarea
