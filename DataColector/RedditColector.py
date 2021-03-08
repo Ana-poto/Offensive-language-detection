@@ -15,6 +15,17 @@ def deEmojify(text):
                            "]+", flags = re.IGNORECASE)
     return regrex_pattern.sub(r'',text)
 
+def cleanComment(comment):
+    data = re.sub('http\S+|www\S+|Www\S+', '', comment)
+    data = re.sub('Attached Files|Click aici', '', data)
+    data = re.sub('\S+.jpg|\S+.png|\S+K|\w+.jpg|\w+.png|\w+K', '', data)
+    data = re.sub('\d{2} \w+ \d{4} \- \d{2}\:\d{2}', '', data)
+    data = re.sub('Edited | Edited on |by \w+\, | downloads|said| said| said| on ', '', data)
+    data = re.sub('\:| \, |\[|\]| \- |\,\,|\)\)', '', data)
+    data = re.sub('  ', '', data)
+    data = re.sub('\(embed\)', '', data)
+    return data
+
 if __name__ == '__main__':
     my_client_id='bYYD6rUFvlYbXQ'
     my_client_secret='7Wm46fm-9wSfphKU0EJtPRcnB4Ce9w'
@@ -28,34 +39,21 @@ if __name__ == '__main__':
     commentsTimisoara = reddit.subreddit('timisoara').comments(limit=None)
     with open("redditComments.txt", "w+", encoding="utf-8") as f:
         for comment in commentsRomania:
-            #print(comment.body)
-            comment.body = re.sub('http\S+', '', comment.body)
-            comment.body = re.sub('www\S+', '', comment.body)
-            comment.body = re.sub('Www\S+', '', comment.body)
+            data = cleanComment(comment.body)
+            f.write(data)
+            f.write("\n")
+        for comment in commentsIasi:
+            data = cleanComment(comment.body)
             data = comment.body
             f.write(data)
             f.write("\n")
         for comment in commentsIasi:
-            # print(comment.body)
-            comment.body = re.sub('http\S+', '', comment.body)
-            comment.body = re.sub('www\S+', '', comment.body)
-            comment.body = re.sub('Www\S+', '', comment.body)
-            data = comment.body
-            f.write(data)
-            f.write("\n")
-        for comment in commentsIasi:
-            # print(comment.body)
-            comment.body = re.sub('http\S+', '', comment.body)
-            comment.body = re.sub('www\S+', '', comment.body)
-            comment.body = re.sub('Www\S+', '', comment.body)
+            data = cleanComment(comment.body)
             data = comment.body
             f.write(data)
             f.write("\n")
         for comment in commentsTimisoara:
-            # print(comment.body)
-            comment.body = re.sub('http\S+', '', comment.body)
-            comment.body = re.sub('www\S+', '', comment.body)
-            comment.body = re.sub('Www\S+', '', comment.body)
+            data = cleanComment(comment.body)
             data = comment.body
             f.write(data)
             f.write("\n")
