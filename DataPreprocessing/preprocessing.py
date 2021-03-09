@@ -58,6 +58,21 @@ def tokenizer(inputData):
     print("Items ", len(finalWords))
     return finalWords
 
+def cleanComments(inputData):
+    #remove all tokens that are not alphabetic
+    #remove all english words
+    result = list()
+    englishWords = set(w.lower() for w in brown.words())
+    for comment in inputData:
+        tokens = word_tokenize(comment)
+        comm = str()
+        for word in tokens:
+            if word not in englishWords:
+                if word.isalpha():
+                    comm+=word+" "
+        result.append(comm)
+    return result
+
 def normalization(inputData):
     spacy.prefer_gpu()
     nlp = spacy.load("ro_core_news_sm")
@@ -68,14 +83,21 @@ if __name__ == '__main__':
     filename2="safeDataSet.txt"
     badData = readFromFile(filename1)
     safeData = readFromFile(filename2)
-    safeData=str(listToString(prepareForNLTK(safeData)))
-    badData=str(listToString(prepareForNLTK(badData)))
+    safeData=prepareForNLTK(safeData)
+    badData=prepareForNLTK(badData)
+    safeData=cleanComments(safeData)
+    badData=cleanComments(badData)
+    writeToFile("cleanSafeComments.txt",safeData)
+    writeToFile("cleanBadComments.txt",badData)
 
-    badData=normalization(badData)
-    safeData=normalization(safeData)
-    safeWords=tokenizer(listToString(safeData))
-    print("==========================================")
-    badWords = tokenizer(listToString(badData))
-    print("==========================================")
-    writeToFile("safeWords.txt",safeWords)
-    writeToFile("badWords.txt",badWords)
+
+    # badData=normalization(badData)
+    # safeData=normalization(safeData)
+    # safeWords=tokenizer(listToString(safeData))
+    # print("==========================================")
+    # badWords = tokenizer(listToString(badData))
+    # print("==========================================")
+    # writeToFile("safeWords.txt",safeWords)
+    # writeToFile("badWords.txt",badWords)
+
+
