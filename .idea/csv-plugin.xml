@@ -17,10 +17,24 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\DataColector\redditComments.txt">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\DataColector\softpedia.txt">
           <value>
             <Attribute>
               <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\DataPreprocessing\preprocessing.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
             </Attribute>
           </value>
         </entry>

@@ -44,17 +44,14 @@ if __name__ == '__main__':
             f.write("\n")
         for comment in commentsIasi:
             data = cleanComment(comment.body)
-            data = comment.body
             f.write(data)
             f.write("\n")
         for comment in commentsIasi:
             data = cleanComment(comment.body)
-            data = comment.body
             f.write(data)
             f.write("\n")
         for comment in commentsTimisoara:
             data = cleanComment(comment.body)
-            data = comment.body
             f.write(data)
             f.write("\n")
     f.close()
