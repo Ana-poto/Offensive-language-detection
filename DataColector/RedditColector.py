@@ -40,21 +40,15 @@ if __name__ == '__main__':
     with open("redditComments.txt", "w+", encoding="utf-8") as f:
         for comment in commentsRomania:
             data = cleanComment(comment.body)
+            f.write("ANNOTATION\n")
             f.write(data)
             f.write("\n")
         for comment in commentsIasi:
             data = cleanComment(comment.body)
-            f.write(data)
-            f.write("\n")
-        for comment in commentsIasi:
-            data = cleanComment(comment.body)
-            f.write(data)
-            f.write("\n")
-        for comment in commentsTimisoara:
-            data = cleanComment(comment.body)
+            f.write("ANNOTATION\n")
             f.write(data)
             f.write("\n")
     f.close()
-
+    print("Done")
 
 

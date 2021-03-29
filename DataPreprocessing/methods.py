@@ -10,7 +10,9 @@ def readFromFile(filename):
         lineList = f.readlines()
         for line in lineList:
             data.append(line)
-    return removeEmptyLines(data)
+            data.append("\n")
+
+    return data
 
 def writeToFile(filename,inputData):
     with open(filename,"w+", encoding="utf-8") as f:
@@ -27,8 +29,7 @@ def listToString(inputData):
         resultString+=str(s)+" "
     return resultString
 
-def removeEmptyLines(inputData):
-    return [x.strip() for x in inputData if x.strip()]
+
 
 
 def prepareForNLTK(inputData):
@@ -61,14 +62,18 @@ def cleanComments(inputData):
     #remove all tokens that are not alphabetic
     #remove all english words
     result = list()
-    englishWords = set(w.lower() for w in brown.words())
+    englishWords = set(w for w in brown.words())
+    englishWords2 = set(w.capitalize() for w in brown.words())
+    lower_englishWords = set(w.lower() for w in brown.words())
+    english_stop_words = set(stopwords.words('english'))
     for comment in inputData:
         tokens = word_tokenize(comment)
         comm = str()
         for word in tokens:
-            if word not in englishWords:
-                if word.isalpha():
-                    comm+=word+" "
+            if word not in englishWords and word not in englishWords2 and word not in lower_englishWords or word == "ANNOTATION" :
+                if len(word) < 16 and word not in english_stop_words:
+                    if word.isalpha():
+                        comm+=word+" "
         result.append(comm)
     return result
 

@@ -1,0 +1,34 @@
+Zip-ul in cauza, contine 5 fisiere denumite OCDataset[numar].txt.
+(OCDataset = offensive comments dataset)
+In fiecare fisier se regasesc in jur de 60 de comentarii, extrase de pe subreddits in limba romana.
+Inaintea fiecarui comentariu se gaseste o eticheta de tipul " <ANNOTATION = > ".
+In cadrul acestor etichete trebuie adaugat un atribut care reflecta impactul produs de continutul comentariului:
+-ofensator
+-neutru
+-pozitiv
+
+Exemplu de adnotare :
+-->inainte
+<ANNOTATION = >
+El este o persoana foarte urata, seamana cu un sobolan.
+-->dupa
+<ANNOTATION = ofensator >
+El este o persoana foarte urata, seamana cu un sobolan.
+
+SAU
+-->inainte
+<ANNOTATION = >
+Asta nu are cum sa se intample
+-->dupa
+<ANNOTATION = neutru >
+Asta nu are cum sa se intample
+
+
+Note :
+1.Va rog, ca orice comentariu care contine injuraturi sa fie direct adnotat cu "ofensator".
+2.Daca contextul comentariului este vag sau  pur si simplu nu are sens, va rog, sa il adnotati cu "neutru".
+3.Deoarece colectarea si procesarea initiala s-a facut automat, daca mai regasiti cuvinte in limba engleza,
+va rog, sa le stergeti.
+
+PS: Va multumesc mult pentru munca depusa!
+Imi cer scuze, in prealabil, pentru ce ati putea gasi prin comentarii. :)
