@@ -17,7 +17,7 @@ def readFromFile(filename):
 def writeToFile(filename,inputData):
     with open(filename,"w+", encoding="utf-8") as f:
         for word in inputData:
-            f.write(word)
+            f.write(str(word))
             f.write("\n")
     f.close()
     print("Done")
@@ -44,19 +44,20 @@ def prepareForNLTK(inputData):
 
 def tokenizer(inputData):
     #tokens
+
     tokens = word_tokenize(inputData)
     print("Tokens ", len(tokens))
     #remove all tokens that are not alphabetic
-    words = [word for word in tokens if word.isalpha()]
+    words = [word.lower() for word in tokens if word.isalpha()]
     print("Words ", len(words))
     #remove all english words
     englishWords =  set(w.lower() for w in brown.words())
     result = [w for w in words if not w in englishWords]
     #remove stopwords
     stop_words = set(stopwords.words('romanian'))
-    finalWords = [w for w in result if not w in stop_words]
-    print("Items ", len(finalWords))
-    return finalWords
+    finalWords = [w for w in result if not w in stop_words and w != "annotation" and len(w) >3 and len(w)<16]
+    print("Items ", len(list(dict.fromkeys(finalWords))))
+    return list(dict.fromkeys(finalWords))
 
 def cleanComments(inputData):
     #remove all tokens that are not alphabetic
@@ -77,10 +78,17 @@ def cleanComments(inputData):
         result.append(comm)
     return result
 
+
 def normalization(inputData):
+    data = list(dict.fromkeys(inputData))
     spacy.prefer_gpu()
     nlp = spacy.load("ro_core_news_sm")
-    return nlp(inputData)
+    result=list()
+    for s in data:
+        result.append(nlp(s))
+    return result
+
+
 def deEmojify(text):
     regrex_pattern = re.compile(pattern = "["
         u"\U0001F600-\U0001F64F"  # emoticons

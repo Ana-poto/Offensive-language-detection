@@ -38,7 +38,21 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\DataPreprocessing\methods.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\DataPreprocessing\preprocessing.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\DataPreprocessing\vocabularExtraction.py">
           <value>
             <Attribute>
               <option name="separator" value=":" />

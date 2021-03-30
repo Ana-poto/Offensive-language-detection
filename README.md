@@ -8,7 +8,7 @@ An elaborated explanation of the impact that online negative comments can be fou
 ## Project File Structure and Elaboration
   The project files hierarchy is divided in multiple folders, each of them representing a step in the development of the project.
   ### Data Collection 
-  - the main data source of this project was represented by web scraping news sites comments section and Reddit Roumanian threads comments
+  - the main data source of this project was represented by web scraping news sites comments section and Reddit Romanian threads comments
   ### Data Prepocessing
   The scraped data had been preprocessed twice :
   -  first : it was clean of any mentions/links/emoji/etc -> the obtained data was used in the annotation step

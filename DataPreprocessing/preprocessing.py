@@ -2,16 +2,6 @@ import methods
 
 if __name__ == '__main__':
 
-    # # Extract vocabulary from commnents
-    # badData=normalization(badData)
-    # safeData=normalization(safeData)
-    # safeWords=tokenizer(listToString(safeData))
-    # print("==========================================")
-    # badWords = tokenizer(listToString(badData))
-    # print("==========================================")
-    # writeToFile("safeWords.txt",safeWords)
-    # writeToFile("badWords.txt",badWords)
-
     # Clean comments
     filename1="E:\GitHub\Offensive-language-detection\DataPreprocessing\InitialDataset\offensiveDataSet.txt"
     filename2="E:\GitHub\Offensive-language-detection\DataPreprocessing\InitialDataset\safeDataSet.txt"
