@@ -20,8 +20,9 @@ An elaborated explanation of the impact that online negative comments can be fou
   ### Bayes Classifier
   ### UserInterface integration
 ## Project Structure
-## [Project Diagram]
+## [Project Diagram Overview]
 ![Imaginatorul](https://github.com/Ana-poto/Offensive-language-detection/blob/main/Diagrams/OLDetectionApp.svg)
+## [Project Diagram Expanded]
 ![Imaginatorul](https://github.com/Ana-poto/Offensive-language-detection/blob/main/Diagrams/OLDetectionAppExp.svg)
 
 ## Notes
