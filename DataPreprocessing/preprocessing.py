@@ -21,8 +21,8 @@ if __name__ == '__main__':
     # badData = methods.prepareForNLTK(badData)
     safeData = methods.cleanComments(safeData)
     badData = methods.cleanComments(badData)
-    methods.writeToFile("Comments/cleanSafeComments.txt", safeData)
-    methods.writeToFile("Comments/cleanBadComments.txt", badData)
+    methods.writeToFile("CleanComments/cleanSafeComments.txt", safeData)
+    methods.writeToFile("CleanComments/cleanBadComments.txt", badData)
 
 
 

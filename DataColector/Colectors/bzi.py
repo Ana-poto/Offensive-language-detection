@@ -12,7 +12,7 @@ def getComments(URL):
     for coment in content:
         comments.append(coment.text)
 
-    f = open("bzi.txt", "a", encoding="utf-8")
+    f = open("../CommentsColected/bzi.txt", "a", encoding="utf-8")
     for com in comments:
         f.write(str(com))
     f.close()

@@ -62,7 +62,7 @@ if __name__ == '__main__':
         for result in soup.select('[z_itemprop="commentText"]'):
             comments.append(result.get_text("\n", strip=True))
             # print(result.get_text("\n", strip=True))
-    with open("softpedia.txt", "w+", encoding="utf-8") as f:
+    with open("../CommentsColected/softpedia.txt", "w+", encoding="utf-8") as f:
         for comment in comments:
             f.write("ANNOTATION\n")
             data=cleanComment1(comment)
