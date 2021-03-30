@@ -20,8 +20,9 @@ An elaborated explanation of the impact that online negative comments can be fou
   ### Bayes Classifier
   ### UserInterface integration
 ## Project Structure
-## [Project Diagram](https://github.com/Ana-poto/Offensive-language-detection/blob/main/Diagrams/OLDetectionApp.svg)
-## [Project Diagram](https://github.com/Ana-poto/Offensive-language-detection/blob/main/Diagrams/OLDetectionAppExp.svg)
+## [Project Diagram]
+![Imaginatorul](https://github.com/Ana-poto/Offensive-language-detection/blob/main/Diagrams/OLDetectionApp.svg)
+![Imaginatorul](https://github.com/Ana-poto/Offensive-language-detection/blob/main/Diagrams/OLDetectionAppExp.svg)
 
 ## Notes
 The project represents an adaptive implementation of one of the classifiers presented in the paper [Offensive Language Detection Explained](https://www.aclweb.org/anthology/2020.trac-1.22.pdf) by Julian Risch, Robin Ruff and Ralf Krestel
