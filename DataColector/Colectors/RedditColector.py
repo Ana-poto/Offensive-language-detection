@@ -37,13 +37,23 @@ if __name__ == '__main__':
     commentsIasi = reddit.subreddit('iasi').comments(limit=None)
     commentsBucuresti = reddit.subreddit('bucuresti').comments(limit=None)
     commentsTimisoara = reddit.subreddit('timisoara').comments(limit=None)
-    with open("../CommentsColected/redditComments.txt", "w+", encoding="utf-8") as f:
+    with open("ColectingPhase2/redditComments.txt", "w+", encoding="utf-8") as f:
         for comment in commentsRomania:
             data = cleanComment(comment.body)
             f.write("ANNOTATION\n")
             f.write(data)
             f.write("\n")
         for comment in commentsIasi:
+            data = cleanComment(comment.body)
+            f.write("ANNOTATION\n")
+            f.write(data)
+            f.write("\n")
+        for comment in commentsBucuresti:
+            data = cleanComment(comment.body)
+            f.write("ANNOTATION\n")
+            f.write(data)
+            f.write("\n")
+        for comment in commentsTimisoara:
             data = cleanComment(comment.body)
             f.write("ANNOTATION\n")
             f.write(data)

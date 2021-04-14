@@ -51,7 +51,38 @@ if __name__ == '__main__':
         "https://forum.softpedia.com/topic/1165051-arta-moderna-reducerea-la-esenta-sau-lene/page__st__234",
         "https://forum.softpedia.com/topic/1101427-atat-rationamentul-cat-si-adevarul-sunt-falsificari-pragmatice-referitor-la-realitate/",
         "https://forum.softpedia.com/topic/1101427-atat-rationamentul-cat-si-adevarul-sunt-falsificari-pragmatice-referitor-la-realitate/page__st__18",
-        "https://forum.softpedia.com/topic/1187056-olarit/"]
+        "https://forum.softpedia.com/topic/1187056-olarit/",
+        "https://forum.softpedia.com/topic/959867-lumea-peste-50-de-ani/",
+        "https://forum.softpedia.com/topic/959867-lumea-peste-50-de-ani/page__st__18",
+        "https://forum.softpedia.com/topic/66525-propuneri-pentru-vacanthele-sau-week-end-urile-viitoare/",
+        "https://forum.softpedia.com/topic/66525-propuneri-pentru-vacanthele-sau-week-end-urile-viitoare/page__st__18",
+        "https://forum.softpedia.com/topic/66525-propuneri-pentru-vacanthele-sau-week-end-urile-viitoare/page__st__36",
+        "https://forum.softpedia.com/topic/66525-propuneri-pentru-vacanthele-sau-week-end-urile-viitoare/page__st__54",
+        "https://forum.softpedia.com/topic/66525-propuneri-pentru-vacanthele-sau-week-end-urile-viitoare/page__st__72",
+        "https://forum.softpedia.com/topic/66525-propuneri-pentru-vacanthele-sau-week-end-urile-viitoare/page__st__90",
+        "https://forum.softpedia.com/topic/66525-propuneri-pentru-vacanthele-sau-week-end-urile-viitoare/page__st__108",
+        "https://forum.softpedia.com/topic/66525-propuneri-pentru-vacanthele-sau-week-end-urile-viitoare/page__st__126",
+        "https://forum.softpedia.com/topic/66525-propuneri-pentru-vacanthele-sau-week-end-urile-viitoare/page__st__144",
+        "https://forum.softpedia.com/topic/66525-propuneri-pentru-vacanthele-sau-week-end-urile-viitoare/page__st__162",
+        "https://forum.softpedia.com/topic/66525-propuneri-pentru-vacanthele-sau-week-end-urile-viitoare/page__st__180",
+        "https://forum.softpedia.com/topic/66525-propuneri-pentru-vacanthele-sau-week-end-urile-viitoare/page__st__198",
+        "https://forum.softpedia.com/topic/66525-propuneri-pentru-vacanthele-sau-week-end-urile-viitoare/page__st__216",
+        "https://forum.softpedia.com/topic/66525-propuneri-pentru-vacanthele-sau-week-end-urile-viitoare/page__st__234",
+        "https://forum.softpedia.com/topic/959867-lumea-peste-50-de-ani/",
+        "https://forum.softpedia.com/topic/959867-lumea-peste-50-de-ani/page__st__18",
+        "https://forum.softpedia.com/topic/1181207-dublarile-astrale/",
+        "https://forum.softpedia.com/topic/1182348-interpretare-vis/",
+        "https://forum.softpedia.com/topic/1154819-reincarnarea-si-amintirile-din-vieti-anterioare/",
+        "https://forum.softpedia.com/topic/1154819-reincarnarea-si-amintirile-din-vieti-anterioare/page__st__18",
+        "https://forum.softpedia.com/topic/1154819-reincarnarea-si-amintirile-din-vieti-anterioare/page__st__36",
+        "https://forum.softpedia.com/topic/1186107-plantele-sufera/",
+        "https://forum.softpedia.com/topic/66525-propuneri-pentru-vacanthele-sau-week-end-urile-viitoare/page__st__126",
+        "https://forum.softpedia.com/topic/66525-propuneri-pentru-vacanthele-sau-week-end-urile-viitoare/page__st__144",
+        "https://forum.softpedia.com/topic/66525-propuneri-pentru-vacanthele-sau-week-end-urile-viitoare/page__st__162",
+        "https://forum.softpedia.com/topic/66525-propuneri-pentru-vacanthele-sau-week-end-urile-viitoare/page__st__180"]
+
+    #Added at phase2 comments colecting
+    links_forum_culinar =["http://www.culinar.ro/forum/continut/bune-maniere/27652/cadouri-rele/",]
 
     comments=[]
 
@@ -62,7 +93,7 @@ if __name__ == '__main__':
         for result in soup.select('[z_itemprop="commentText"]'):
             comments.append(result.get_text("\n", strip=True))
             # print(result.get_text("\n", strip=True))
-    with open("../CommentsColected/softpedia.txt", "w+", encoding="utf-8") as f:
+    with open("ColectingPhase2/softpedia.txt", "w+", encoding="utf-8") as f:
         for comment in comments:
             f.write("ANNOTATION\n")
             data=cleanComment1(comment)
