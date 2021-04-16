@@ -10,11 +10,11 @@ def getComments(URL):
     comments = []
 
     for coment in content:
-        comments.append("ANNOTATION\n")
         comments.append(coment.text)
 
     f = open("E:/GitHub/Offensive-language-detection/DataColector/ColectingPhase2/bzi.txt", "a", encoding="utf-8")
     for com in comments:
+        f.write("ANNOTATION\n")
         f.write(str(com))
     f.close()
 
