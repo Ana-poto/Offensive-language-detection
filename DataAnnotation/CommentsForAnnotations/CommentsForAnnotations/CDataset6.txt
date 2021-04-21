@@ -757,6 +757,7 @@ pai tocmai asta vreau sa iau rucsacul munte dar nu sa stau cort munte cel fost v
 ce cabane fost Valea Prahovei daca zici ca nu mergi cortul nu ca recomand dar sa stim noi ce experienta
 <ANNOTATION = >
 multumesc pentru sugestii astept altele
+
 ce cabane fost Valea Prahovei daca zici ca nu mergi cortul nu ca recomand dar sa stim noi ce experienta
 ca nu minte numele
 <ANNOTATION = >
@@ -765,6 +766,7 @@ Pai cazul asta voi presupune ca desi fost Valea Prahovei nu fost totusi Bucegi n
 alta recomandare
 plaiul foii
 <ANNOTATION = >
+
 Pai cazul asta voi presupune ca desi fost Valea Prahovei nu fost totusi Bucegi numele cabanelor nu asa usor uitat
 Bucegi fost doar platou Sfinx dar asta drumetie nu locuit cabane munti ci stat tot timpul numai orase
 merci pt recomandare
@@ -779,5 +781,3 @@ Vara asta dupa licenta vreau sa intind prietena concediu undeva spre munte satur
 mers sa mergem masina undeva jur zile
 intereseaza pesteri manastari alte chestii genul asta putin urcat munte plimbari obositoare
 Ce trasee ati recomanda
-
-

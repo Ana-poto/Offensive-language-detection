@@ -1,14 +1,13 @@
 import fileinput
-import os
-
-from ipython_genutils.py3compat import xrange
 
 
-def remove_empty_lines(f1,f2):
-    f=open(f2,'w+')
+def remove_empty_lines(f1, f2):
+    f = open(f2, 'w+')
     for line in fileinput.FileInput(f1, inplace=1):
         if line.rstrip():
             f.write(line)
+
+
 def wordCounter(filename):
     file = open(filename, 'r')
     count = 0
@@ -18,6 +17,8 @@ def wordCounter(filename):
         count += len(words)
     file.close()
     print(count)
+
+
 if __name__ == '__main__':
     # remove_empty_lines("../DataColector/ColectingPhase2/readyForAdnotation.txt","../DataAnnotation/CommentsForAnnotations/comments.txt")
     # file = open("../DataAnnotation/CommentsForAnnotations/comments.txt", 'r')
