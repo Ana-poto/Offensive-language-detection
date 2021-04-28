@@ -1,3 +1,6 @@
+"""
+Takes care of cleaning the comments
+"""
 import methods
 def wordCounter(filename):
     file = open(filename, 'r')
@@ -30,8 +33,9 @@ if __name__ == '__main__':
     # safeData = methods.prepareForNLTK(safeData)
     # badData = methods.prepareForNLTK(badData)
     cleanData = methods.cleanComments(data)
-    methods.writeToFile("../DataColector/ColectingPhase2/readyForAdnotation.txt", cleanData)
-    wordCounter("../DataColector/ColectingPhase2/readyForAdnotation.txt")
+    methods.writeToFile("../DataColector/CommentsColected/readyForAdnotation.txt", cleanData)
+    wordCounter("../DataColector/CommentsColected/readyForAdnotation.txt")
 
+#TODO
 #lematizare pt limba romana (dexonline)
 #ro-word-net
