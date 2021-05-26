@@ -18,7 +18,7 @@ An elaborated explanation of the impact that online negative comments can be fou
   The clean comments were annotated with 3 tags, based on their meaning/impact : neutral, offensive or positive.
   ### Data Vectorization
   ### Bayes Classifier
-  ### UserInterface integration
+  ### WebService integration
   ### Project Documentation
 ## Project Structure
 ### Project Diagram Overview

@@ -15,8 +15,8 @@ def wordCounter(filename):
 if __name__ == '__main__':
 
     # # Clean comments
-    # filename1="E:\GitHub\Offensive-language-detection\DataPreprocessing\InitialDataset\offensiveDataSet.txt"
-    # filename2="E:\GitHub\Offensive-language-detection\DataPreprocessing\InitialDataset\safeDataSet.txt"
+    # filename1="E:\GitHub\Offensive-language-detection\Phase_2_DataPreprocessing\InitialDataset\offensiveDataSet.txt"
+    # filename2="E:\GitHub\Offensive-language-detection\Phase_2_DataPreprocessing\InitialDataset\safeDataSet.txt"
     # badData = methods.readFromFile(filename1)
     # safeData = methods.readFromFile(filename2)
     # # safeData = methods.prepareForNLTK(safeData)
@@ -27,14 +27,14 @@ if __name__ == '__main__':
     # methods.writeToFile("CleanComments/cleanBadComments.txt", badData)
 
     # Clean comments phase2
-    filename1="../DataColector/ColectingPhase2/allComments.txt"
+    filename1="../Phase_1 _DataColector/ColectingPhase2/allComments.txt"
 
     data = methods.readFromFile(filename1)
     # safeData = methods.prepareForNLTK(safeData)
     # badData = methods.prepareForNLTK(badData)
     cleanData = methods.cleanComments(data)
-    methods.writeToFile("../DataColector/CommentsColected/readyForAdnotation.txt", cleanData)
-    wordCounter("../DataColector/CommentsColected/readyForAdnotation.txt")
+    methods.writeToFile("../Phase_1 _DataColector/CommentsColected/readyForAdnotation.txt", cleanData)
+    wordCounter("../Phase_1 _DataColector/CommentsColected/readyForAdnotation.txt")
 
 #TODO
 #lematizare pt limba romana (dexonline)

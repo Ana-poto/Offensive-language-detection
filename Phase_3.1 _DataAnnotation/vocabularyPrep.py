@@ -1,10 +1,10 @@
 """
-Reference : see vocabulary extraction for DataPreprocessing
+Reference : see vocabulary extraction for Phase_2_DataPreprocessing
 """
 from nltk import word_tokenize
 from nltk.corpus import stopwords
 
-from DataPreprocessing import methods
+from Phase_2_DataPreprocessing import methods
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 def annotation_neutral_words(inputData):
@@ -30,7 +30,7 @@ def tif_vec(text):
     print(vector.toarray())
 
 if __name__ == '__main__':
-    data = methods.readFromFile("E:\GitHub\Offensive-language-detection\DataPreprocessing\Vocabulary\words.txt")
+    data = methods.readFromFile("/Phase_2_DataPreprocessing\Vocabulary\words.txt")
     annotation_neutral_words(data)
     datatext = methods.readFromFile("E:\GitHub\Offensive-language-detection\DataColector\ColectingPhase2\commentsWithourLabel.txt")
     tif_vec(datatext)

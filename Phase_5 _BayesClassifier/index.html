@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Detectare a comentariilor ofensatoare in limba romana</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+  <style>
+    body{
+        background:  radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 33%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    div{
+      height: 400px;
+      width: 800px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    #diclaimer{
+    color:grey;
+    }
+    #label{
+    color:yellow;
+    }
+  </style>
+</body>
+<div>
+    <h1 id ="title">Buna, straine!</h1>
+    <p>Bun venit la micul web service de Detectare a comentariilor ofensatoare in limba romana !<p>
+    <p>Introdu un comentariu si iti vom oferi o eticheta pentru el pe baza continutului</p>
+    <p id="diclaimer">Te rog sa introduci comentarii de maxim 250 de caractere.</p>
+    <form action="/">
+      <label for="comment">Comment</label>
+      <input type="text" id="comment" name="comment" required><br><br>
+                <p id="comm_label"></p>
+       <button type='button' onclick="sendToServer()">submit</button>
+    </form>
+</div>
+</body>
+    <script type="text/javascript">
+        function sendToServer() {
+        var postUrl = 'http://localhost:9090/';
+        var userComment = document.getElementById("comment").value;
+        var requestData = { comment: userComment};
+      $.ajax({
+            type: "POST",
+            url: postUrl,
+            data: requestData,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function(response){
+                document.getElementById("comm_label").innerHTML = 'Eticheta pentru comentariul dat este : ' + response;
+                },
+           error: function(jqXHR, textStatus, errorThrown){
+           alert('error');
+           }
+      });
+
+        };
+    </script>
+</html>
