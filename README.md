@@ -28,11 +28,11 @@ An elaborated explanation of the impact that online negative comments can be fou
 ## Project Structure
 ### Project Diagram Overview
 
-![Imaginatorul](https://github.com/Ana-poto/Offensive-language-detection/blob/main/Phase_0_Diagrams/OLDetectionApp.svg)
+![Imaginatorul](https://github.com/Ana-poto/Offensive-language-detection/blob/main/Phase_0%20_Diagrams/OLDetectionApp.svg)
 
 ### Project Diagram Expanded
 
-![Imaginatorul](https://github.com/Ana-poto/Offensive-language-detection/blob/main/Phase_0_Diagrams/OLDetectionAppExp.svg)
+![Imaginatorul](https://github.com/Ana-poto/Offensive-language-detection/blob/main/Phase_0%20_Diagrams/OLDetectionAppExp.svg)
 
 ## Notes
 The project represents an adaptive implementation of one of the classifiers presented in the paper [Offensive Language Detection Explained](https://www.aclweb.org/anthology/2020.trac-1.22.pdf) by Julian Risch, Robin Ruff and Ralf Krestel
